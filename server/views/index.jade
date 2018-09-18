@@ -1,0 +1,15 @@
+extends layout
+
+block content
+  h1 添加或删除用户
+  form(action="", method="post")
+    p 用户名：
+      input(type="text" id="username" name="username")
+    p 密码：
+      input(type="text" id="password" name="password")
+    input(type="submit" id="addUser" value="添加" name="addUser")
+    input(type="submit" id="delUser" value="删除" name="delUser")
+  h1 用户表数据
+  each user in title
+    p= user['username'] + ' ' + user['password']
+
